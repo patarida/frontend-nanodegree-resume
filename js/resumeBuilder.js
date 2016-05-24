@@ -9,8 +9,8 @@ This is empty on purpose! Your code to build the resume will go here.
 
  $("#header").prepend(formattedRole);
  $("#header").prepend(formattedName);
- 
- //---------------------variable arrays-------------------------//
+
+//---------------------variable arrays-------------------------//
 
 var bio = {
     "name": name,
@@ -67,10 +67,10 @@ var education = {
             "url": "https://www.codecademy.com/learn/javascript",
         },
     ]
-}
+};
 
 var works = {
-    work: [
+    "jobs": [
         {
         "employer":"Schlumberger China", 
         "title":"Operation Support Engineer", 
@@ -93,7 +93,7 @@ var works = {
         "descriptions":"Lead the drilling & measurement operation projects."
         }
     ]
-}
+};
 
 var projects = {
     project: [
@@ -104,5 +104,34 @@ var projects = {
         "images": "images/rig3.jpg"
         }
     ]
-}
-//----------end of variable declaratin---------
+};
+//----------end of variable declaratin--------- //
+
+
+//------- if skills not empty, add skills------ //
+if (bio["skills"]){
+    $("#header").append(HTMLskillsStart)
+    for (var i in bio["skills"]) {
+        var formattedSkills = HTMLskills.replace("%data%", bio["skills"][i]);
+        $("#skills").append(formattedSkills);
+    };
+};
+
+//--for all jobs in works, append HTMLworkStart for each one-- //
+for (var job in works.jobs) {
+    $("#workExperience").append(HTMLworkStart);    
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", works.jobs[job].employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", works.jobs[job]["title"]);
+    $(".work-entry:last").append(formattedEmployer + formattedTitle);
+
+    
+    
+    
+    var formattedDates = HTMLworkDates.replace("%data%", works.jobs[job].dates);
+    var formattedLocation = HTMLworkLocation.replace("%data%", works.jobs[job]["location"]);
+    var formattedDescription = HTMLworkDescription.replace("%data%", works.jobs[job]["descriptions"]);
+    $(".work-entry:last").append(formattedDates);
+    $(".work-entry:last").append(formattedLocation);
+    $(".work-entry:last").append(formattedDescription);
+
+};
