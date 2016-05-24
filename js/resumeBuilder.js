@@ -10,3 +10,99 @@ This is empty on purpose! Your code to build the resume will go here.
  $("#header").prepend(formattedRole);
  $("#header").prepend(formattedName);
  
+ //---------------------variable arrays-------------------------//
+
+var bio = {
+    "name": name,
+    "role": role,
+    "bioPic": "http://postimg.org/image/oerfq3lvf/",
+    "welcome_msg": "Welcome",
+    "skills": ["Python", "HTML/CSS", "JavaScript", "Statistics"],
+    "contacts": {
+        "email": "patarida@gmail.com",
+        "skype": "lhinoroom",
+        "mobile": "+66-88-234-8062",
+        "gitHub": "Patarida",
+        "twitter": "@happypata",
+    }
+};
+
+var education = {
+    "schools": [
+        {
+        "name": "Chulalongkorn University",
+        "location": "Bangkok, Thailand",
+        "degree": "Bachelor",
+        "major": "Petroleum Engineer",
+        "dates": "2003-2008",
+        "url": "http://www.mining.eng.chula.ac.th/",
+        },
+           {
+        "name": "Triamudom Suksa School",
+        "location": "Bangkok, Thailand",
+        "degree": "High School",
+        "major": "Science",
+        "dates": "2000-2003",
+        "url": "http://www.triamudom.ac.th/",
+        },
+    ],
+
+    "online": [
+        {
+            "title": "Introduction to programming nanodegree",
+            "school": "Udacity",
+            "dates": "2016",
+            "url": "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000",
+        },
+        {
+            "title": "How to use Git and GitHub",
+            "school": "Udacity",
+            "dates": "2016",
+            "url": "https://classroom.udacity.com/courses/ud775/",
+        },
+        {
+            "title": "JavaScript",
+            "school": "Codeacademy",
+            "dates": "2016",
+            "url": "https://www.codecademy.com/learn/javascript",
+        },
+    ]
+}
+
+var works = {
+    work: [
+        {
+        "employer":"Schlumberger China", 
+        "title":"Operation Support Engineer", 
+        "location":"Shekou, China", 
+        "dates":"2014-2016", 
+        "descriptions":"Technical support for drilling operation."
+        },
+        {
+        "employer":"Schlumberger China", 
+        "title":"General Field Engineer", 
+        "location":"Tanggu, China", 
+        "dates":"2013-2014", 
+        "descriptions":"Lead the drilling & measurement operation projects."
+        },
+        {
+        "employer":"Schlumberger Overseas S.A.", 
+        "title":"General Field Engineer", 
+        "location":"Phitsanulok, Thailand", 
+        "dates":"2008-2013", 
+        "descriptions":"Lead the drilling & measurement operation projects."
+        }
+    ]
+}
+
+var projects = {
+    project: [
+        {
+        "title": "Rig up operation",
+        "dates": "2012",
+        "descriptions": "Rig up operation",
+        "images": "images/rig3.jpg"
+        }
+    ]
+}
+//----------end of variable declaratin---------
