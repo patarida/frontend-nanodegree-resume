@@ -1,7 +1,7 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-//--------variables declaration and encapsulated display function-------------------------//
+//The part declare bio, education, work and projects which encapsulated with display function. No input require to call display.//
 var bio = {
     "name": "Patarida Kiatsamuttara",
     "role": "Petroleum Engineer",
@@ -154,7 +154,7 @@ var projects = {
         });  
     }
 };
-//----------end of variable declaratin--------- //
+
 
 //---internationalize Button to convert to Firstname LASTNAME style ---//
 function inName(name){   
@@ -172,4 +172,4 @@ projects.display();
 education.display();
 
 //--call googleMap --//
-//$("#mapDiv").append(googleMap);
+$("#mapDiv").append(googleMap);
